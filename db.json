@@ -1,0 +1,51 @@
+{
+  "orders": [
+    {
+      "id": "1",
+      "name": "anna",
+      "table": "23",
+      "products": [
+        "moka",
+        "capuccino"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "john",
+      "table": "2",
+      "products": [
+        "Latte",
+        "Espresso"
+      ]
+    },
+    {
+      "id": "013ca478-3a0c-4993-8c86-2db4627de51d",
+      "name": "gordon",
+      "table": "11",
+      "products": [
+        "Americano",
+        "Espresso"
+      ]
+    },
+    {
+      "id": "00eefa14-2e3e-4c98-aeb1-ff5e5adc9756",
+      "name": "gordon",
+      "table": "14",
+      "products": [
+        "Espresso",
+        "Machiato"
+      ]
+    }
+  ],
+  "products": [
+    "Americano",
+    "Flat White",
+    "Cappuccino",
+    "Latte",
+    "Espresso",
+    "Machiato",
+    "Mocha",
+    "Hot Chocolate",
+    "Tea"
+  ]
+}

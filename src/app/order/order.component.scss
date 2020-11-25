@@ -28,6 +28,8 @@ mat-grid-list{
     }
   }
 }
+
+mat-list { max-height: 400px; overflow: auto; }
 //TO-DO fix width items
 .mat-list-item{
   display: inline-block;
