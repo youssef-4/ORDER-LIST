@@ -1,0 +1,48 @@
+:host{
+  /* height: 100vh; */
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+form{
+  min-width: 150px;
+  max-width: 500px;
+  width: 92%;
+  margin:1rem auto 0;
+}
+
+mat-form-field{
+  width: 100%;
+}
+mat-grid-list{
+
+  position: initial;
+  mat-grid-tile{
+    width: fit-content;
+    height: fit-content;
+    button
+    {
+      width: 80%;
+    }
+  }
+}
+//TO-DO fix width items
+.mat-list-item{
+  display: inline-block;
+  &-content{
+  width: fit-content;}
+}
+
+mat-divider{
+
+  margin:1rem;
+  width: 94%;
+}
+
+#submit{
+  margin:auto;
+  width:94%;
+}
+
