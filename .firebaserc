@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "prueba-9ed76": {
+      "hosting": {
+        "orders": [
+          "prueba-9ed76"
+        ]
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 <h5>Comandas pendientes</h5>
 <mat-list>
-  <mat-list-item *ngFor="let order of orderList">
+  <mat-list-item *ngFor="let order of lista | async">
 {{order.table}}..........{{order.name}}
     <!-- {{order | json}} -->
 

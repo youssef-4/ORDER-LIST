@@ -1,6 +1,8 @@
+import { Observable } from 'rxjs';
 import { Order } from './../shared/interfaces/order';
 import { Component, OnInit } from '@angular/core';
-import { OrderService } from '../shared/services/order.service';
+// import { OrderService } from '../shared/services/order.service';
+import { FireService } from '../shared/services/fire.service';
 
 @Component({
   selector: 'app-order-list',
@@ -9,14 +11,16 @@ import { OrderService } from '../shared/services/order.service';
 })
 export class OrderListComponent implements OnInit {
 
+  lista: Observable<Order[]>;
   orderList:Order[];
-  constructor(private orderService:OrderService) { }
+  constructor(private fireService:FireService) { }
 
   ngOnInit(): void {
 
-    this.orderService.read$().subscribe(
+   this.lista = this.fireService.read$();
+/*     this.orderService.read$().subscribe(
       data => this.orderList=data.filter(e => e.name == localStorage.getItem('name')));
-
+ */
 
   }
 

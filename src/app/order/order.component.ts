@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {v4 as uuid} from 'uuid';
 import { Order } from '../shared/interfaces/order';
+import { FireService } from '../shared/services/fire.service';
 import { OrderService } from '../shared/services/order.service';
 @Component({
   selector: 'app-order',
@@ -29,7 +30,7 @@ export class OrderComponent implements OnInit {
   formGroup: FormGroup;
 
 
-  constructor(private fb: FormBuilder, private orderService: OrderService) {
+  constructor(private fb: FormBuilder, private fireService: FireService) {
     this.orderProducts=[];
   }
 
@@ -48,7 +49,7 @@ export class OrderComponent implements OnInit {
     this.orderProducts.splice(i,1);
   }
 
-  submit(){
+ async submit(){
     if(this.formGroup.invalid)
       return this.error =true;
 
@@ -65,6 +66,7 @@ export class OrderComponent implements OnInit {
 
     console.log(order);
 
+    await this.fireService.create(order);
     /* this.orderService.create$(order).subscribe(e => {
       this.formGroup.reset();
       this.orderProducts=[];
@@ -72,7 +74,8 @@ export class OrderComponent implements OnInit {
       setTimeout(_=>this.sendSuccess=false,2000);
     }); */
 
-    this.orderService.create(order);
+//    this.orderService.create(order);
+
     this.formGroup.reset();
     this.orderProducts=[];
     this.sendSuccess=true;
