@@ -1,1 +1,12 @@
-<p>order-list works!</p>
+<h5>Comandas pendientes</h5>
+<mat-list>
+  <mat-list-item *ngFor="let order of orderList">
+{{order.table}}..........{{order.name}}
+    <!-- {{order | json}} -->
+
+    <button mat-icon-button (click)='0'>
+      <mat-icon>cancel</mat-icon>
+    </button>
+  </mat-list-item>
+</mat-list>
+

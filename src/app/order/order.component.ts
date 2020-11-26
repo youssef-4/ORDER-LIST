@@ -65,13 +65,21 @@ export class OrderComponent implements OnInit {
 
     console.log(order);
 
-    this.orderService.create(order).subscribe(e => {
+    /* this.orderService.create$(order).subscribe(e => {
       this.formGroup.reset();
       this.orderProducts=[];
       this.sendSuccess=true;
       setTimeout(_=>this.sendSuccess=false,2000);
-    });
+    }); */
+
+    this.orderService.create(order);
+    this.formGroup.reset();
+    this.orderProducts=[];
+    this.sendSuccess=true;
+    setTimeout(_=>this.sendSuccess=false,2000);
+
 
   }
+
 
 }
